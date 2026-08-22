@@ -1,0 +1,23 @@
+{
+    "version": "0.12.0",
+    "description": "Kastra control-plane CLI: policy authoring, environments, evidence, incidents, checkpoints",
+    "homepage": "https://kastra.ai",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.0/kastra-windows-amd64.zip",
+            "hash": "a4cce6e86286b0b881aa066080d55a96c6a66607c063dd89000167aa2dff31d8"
+        },
+        "arm64": {
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.0/kastra-windows-arm64.zip",
+            "hash": "7c9cb8e3875609b9a2e4cd745db52304b48858e5afe2591fd73ee11defdee828"
+        }
+    },
+    "bin": [
+        "kastra.exe"
+    ],
+    "notes": [
+        "kastra installed. Run `kastra auth login` to authenticate, then `kastra --help`.",
+        "Not code-signed; SmartScreen may warn on first run."
+    ]
+}

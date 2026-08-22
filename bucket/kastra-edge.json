@@ -1,0 +1,50 @@
+{
+    "version": "0.12.0",
+    "description": "Kastra Edge clients: kastrahook (agent hook bridge), kastra-edge (CLI), kastra-mcp (read-only MCP server), kastra-mcp-gateway (policy-gated MCP wrapper)",
+    "homepage": "https://kastra.ai",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.0/kastra-edge-bundle-windows-amd64.zip",
+            "hash": "3564b4c336ee841bd34bdd0fa6160f5e8a59cdd738c405382a5d256dc707df9e"
+        },
+        "arm64": {
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.0/kastra-edge-bundle-windows-arm64.zip",
+            "hash": "b543a356429c918f8f74b2ddb397561e41e99564fd9e7858c000f900b04fd999"
+        }
+    },
+    "bin": [
+        "kastra-edge.exe",
+        "kastrahook.exe",
+        "kastra-mcp.exe",
+        "kastra-mcp-gateway.exe"
+    ],
+    "notes": [
+        "Kastra Edge installed. Next steps:",
+        "  1. kastra-edge login          # authorize this device in your browser",
+        "  2. kastra-edge install-hooks  # wire kastrahook into Claude Code",
+        "  3. kastra-edge install-mcp    # register kastra-mcp in Claude Code",
+        "  4. kastra-edge doctor         # verify PATH, hooks, login, connectivity",
+        "",
+        "Optional, per agent:",
+        "  kastra-edge install-cursor         # Cursor (v1.7+)",
+        "  kastra-edge install-codex          # Codex CLI",
+        "  kastra-edge install-hermes         # Hermes Agent",
+        "  kastra-edge wrap-claude-desktop    # govern Claude Desktop's local MCP servers",
+        "",
+        "Restart the agent afterwards so it re-reads its config.",
+        "",
+        "Not available on Windows yet, and these refuse with an explanation:",
+        "install-daemon, uninstall-daemon, daemon-status, restart-daemon,",
+        "sync-binaries. They manage the macOS desktop app's background daemon;",
+        "hook governance does not need any of them.",
+        "",
+        "Known gaps on Windows:",
+        "  * These binaries are not code-signed. SmartScreen may warn on first run.",
+        "  * Your device handle is stored at %USERPROFILE%\\.kastra\\config.toml. It",
+        "    is a long-lived credential. macOS writes it 0600; on Windows that mode",
+        "    is not enforced and the file inherits your user profile's ACL.",
+        "  * Do not trust a 'no history found' result from `kastra-edge scan` on",
+        "    Windows: a surface that cannot be read is currently reported as empty."
+    ]
+}
