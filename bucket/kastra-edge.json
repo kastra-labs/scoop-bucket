@@ -1,16 +1,16 @@
 {
-    "version": "0.12.0",
+    "version": "0.12.1",
     "description": "Kastra Edge clients: kastrahook (agent hook bridge), kastra-edge (CLI), kastra-mcp (read-only MCP server), kastra-mcp-gateway (policy-gated MCP wrapper)",
     "homepage": "https://kastra.ai",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.0/kastra-edge-bundle-windows-amd64.zip",
-            "hash": "3564b4c336ee841bd34bdd0fa6160f5e8a59cdd738c405382a5d256dc707df9e"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.1/kastra-edge-bundle-windows-amd64.zip",
+            "hash": "4d232e6c06c3785ed0e12eaf567bbc084b592be7d5007f5c693ed3faa16409e5"
         },
         "arm64": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.0/kastra-edge-bundle-windows-arm64.zip",
-            "hash": "b543a356429c918f8f74b2ddb397561e41e99564fd9e7858c000f900b04fd999"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.1/kastra-edge-bundle-windows-arm64.zip",
+            "hash": "7c5a98aab54271ea6a77233c8fafb0faaac1bd1019b86829ffe47e5c825fbdfe"
         }
     },
     "bin": [
@@ -44,7 +44,11 @@
         "  * Your device handle is stored at %USERPROFILE%\\.kastra\\config.toml. It",
         "    is a long-lived credential. macOS writes it 0600; on Windows that mode",
         "    is not enforced and the file inherits your user profile's ACL.",
-        "  * Do not trust a 'no history found' result from `kastra-edge scan` on",
-        "    Windows: a surface that cannot be read is currently reported as empty."
+        "  * Policy vocabulary: Claude Code on Windows names its shell tool",
+        "    PowerShell, not Bash. A rule scoped tool eq \"Bash\" does not govern",
+        "    Windows agents - write tool in \"Bash,PowerShell\".",
+        "",
+        "Since 0.12.0, `kastra-edge scan` warns loudly when a history surface",
+        "cannot be read - take those warnings seriously."
     ]
 }
