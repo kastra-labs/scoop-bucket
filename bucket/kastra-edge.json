@@ -1,16 +1,16 @@
 {
-    "version": "0.12.2",
+    "version": "0.12.3",
     "description": "Kastra Edge clients: kastrahook (agent hook bridge), kastra-edge (CLI), kastra-mcp (read-only MCP server), kastra-mcp-gateway (policy-gated MCP wrapper)",
     "homepage": "https://kastra.ai",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.2/kastra-edge-bundle-windows-amd64.zip",
-            "hash": "d836f6d0245d713fcbc91b06ff6c3403d130d93506c60766f538b348a0939896"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.3/kastra-edge-bundle-windows-amd64.zip",
+            "hash": "5d0b65af6196ecdfcb3a3d6b80bd589509af498b6ab299fb25816811a1677704"
         },
         "arm64": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.2/kastra-edge-bundle-windows-arm64.zip",
-            "hash": "e337d33dbc6c8892d77d8a2c005735098bf2f6985c1555ee116888d66468673b"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.12.3/kastra-edge-bundle-windows-arm64.zip",
+            "hash": "c2c79b4e3c32fba43a4ea10f4ce30f260b615a04bbc1482dcb74d862ff8fbb9e"
         }
     },
     "bin": [
@@ -34,16 +34,16 @@
         "",
         "Restart the agent afterwards so it re-reads its config.",
         "",
-        "Not available on Windows yet, and these refuse with an explanation:",
-        "install-daemon, uninstall-daemon, daemon-status, restart-daemon,",
-        "sync-binaries. They manage the macOS desktop app's background daemon;",
-        "hook governance does not need any of them.",
+        "Not available on Windows yet, and it refuses with an explanation:",
+        "sync-binaries. It copies the macOS desktop app's bundled CLIs onto",
+        "PATH; use `scoop update kastra-edge` to upgrade instead.",
         "",
         "Known gaps on Windows:",
         "  * These binaries are not code-signed. SmartScreen may warn on first run.",
         "  * Your device handle is stored at %USERPROFILE%\\.kastra\\config.toml. It",
-        "    is a long-lived credential. macOS writes it 0600; on Windows that mode",
-        "    is not enforced and the file inherits your user profile's ACL.",
+        "    is a long-lived credential. kastra-edge applies an owner-only ACL to",
+        "    it (and any other credential-bearing config it writes), and repairs",
+        "    a wider ACL back to owner-only automatically on the next read.",
         "  * Policy vocabulary: Claude Code on Windows names its shell tool",
         "    PowerShell, not Bash. A rule scoped tool eq \"Bash\" does not govern",
         "    Windows agents - write tool in \"Bash,PowerShell\".",
