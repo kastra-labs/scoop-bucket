@@ -1,16 +1,16 @@
 {
-    "version": "0.13.0",
+    "version": "0.13.1",
     "description": "Kastra Edge clients: kastrahook (agent hook bridge), kastra-edge (CLI), kastra-mcp (read-only MCP server), kastra-mcp-gateway (policy-gated MCP wrapper)",
     "homepage": "https://kastra.ai",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.13.0/kastra-edge-bundle-windows-amd64.zip",
-            "hash": "8b7f213993b18138c48f41405de8a11e3649fb98fd69376ec3caed5930438250"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.13.1/kastra-edge-bundle-windows-amd64.zip",
+            "hash": "10919137137c140d595de0b7423c11a477c2c42a43409a799d3ffbd04a71d073"
         },
         "arm64": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.13.0/kastra-edge-bundle-windows-arm64.zip",
-            "hash": "6ad8497ac2afe375674d7c98a9f25d68c8878c3a96460d245a453bf55b5ac288"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.13.1/kastra-edge-bundle-windows-arm64.zip",
+            "hash": "1413d959a8db3677f965e5ddd2df1effdf3128917496e1a5587c8fca2b22b75c"
         }
     },
     "bin": [
@@ -44,9 +44,11 @@
         "    is a long-lived credential. kastra-edge applies an owner-only ACL to",
         "    it (and any other credential-bearing config it writes), and repairs",
         "    a wider ACL back to owner-only automatically on the next read.",
-        "  * Policy vocabulary: Claude Code on Windows names its shell tool",
-        "    PowerShell, not Bash. A rule scoped tool eq \"Bash\" does not govern",
-        "    Windows agents - write tool in \"Bash,PowerShell\".",
+        "  * Policy vocabulary: kastrahook normalises Claude Code's Windows",
+        "    shell tool name, so a rule scoped tool eq \"Bash\" DOES govern Windows",
+        "    agents (from cli-v0.12.5 on) - do not enumerate spellings. To target",
+        "    the Windows shell specifically, combine tool eq \"Bash\" with os eq",
+        "    \"windows\".",
         "",
         "Since 0.12.0, `kastra-edge scan` warns loudly when a history surface",
         "cannot be read - take those warnings seriously."
