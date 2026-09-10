@@ -1,16 +1,16 @@
 {
-    "version": "0.13.1",
+    "version": "0.13.2",
     "description": "Kastra Edge clients: kastrahook (agent hook bridge), kastra-edge (CLI), kastra-mcp (read-only MCP server), kastra-mcp-gateway (policy-gated MCP wrapper)",
     "homepage": "https://kastra.ai",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.13.1/kastra-edge-bundle-windows-amd64.zip",
-            "hash": "10919137137c140d595de0b7423c11a477c2c42a43409a799d3ffbd04a71d073"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.13.2/kastra-edge-bundle-windows-amd64.zip",
+            "hash": "eb0fccb58769c271071f9fe61d4a395b947cec4505ff8420dab9100e8ce927ad"
         },
         "arm64": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.13.1/kastra-edge-bundle-windows-arm64.zip",
-            "hash": "1413d959a8db3677f965e5ddd2df1effdf3128917496e1a5587c8fca2b22b75c"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.13.2/kastra-edge-bundle-windows-arm64.zip",
+            "hash": "cc3910ef243a904981025bd512f2a91eafdce13a196bafb24b943aefb65fb517"
         }
     },
     "bin": [
