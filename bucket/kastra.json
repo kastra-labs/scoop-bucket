@@ -1,16 +1,16 @@
 {
-    "version": "0.14.0",
+    "version": "0.14.1",
     "description": "Kastra control-plane CLI: policy authoring, environments, evidence, incidents, checkpoints",
     "homepage": "https://kastra.ai",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.14.0/kastra-windows-amd64.zip",
-            "hash": "de339c4fbdd7e1d0727be8508a7ec075951590a7fec2c236f92d880d0e073326"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.14.1/kastra-windows-amd64.zip",
+            "hash": "086010cf99a133732bb30fa87a026412a61771b994b74771508f228e3fccdcc7"
         },
         "arm64": {
-            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.14.0/kastra-windows-arm64.zip",
-            "hash": "f10bea4cb04225f579d4f1910e12fba5e4cac28c0855d1797c11cb7169556669"
+            "url": "https://github.com/kastra-labs/kastra-edge-releases/releases/download/cli-v0.14.1/kastra-windows-arm64.zip",
+            "hash": "ce223028a0278fb826a565f12c7ad884ac75b60aa18a2b9ff659dc37502de276"
         }
     },
     "bin": [
